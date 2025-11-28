@@ -1,0 +1,13 @@
+echo "🚀 Starting Working Script"
+
+# Create machine
+mach create "WorkingSTM32"
+
+# Set as current
+mach set "WorkingSTM32"
+
+# Show empty analyzer
+showAnalyzer ""
+
+echo "✅ Machine Created!"
+echo "💡 Now we can add UART manually"

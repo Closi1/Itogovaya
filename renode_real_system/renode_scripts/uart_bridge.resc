@@ -1,0 +1,20 @@
+echo "🚀 Creating UART Bridge"
+
+# Create machine
+mach create "UARTBridge"
+
+# Set as current machine
+mach set "UARTBridge"
+
+# Create a virtual UART
+emulation CreateUART "virtual_uart"
+
+# Connect UART to TCP socket
+connector Connect virtual_uart socket://127.0.0.1:8888
+
+# Show analyzer for the UART
+showAnalyzer "virtual_uart"
+
+echo "✅ UART Bridge Created!"
+echo "📡 Virtual UART -> TCP:8888"
+echo "💡 Ready to receive data from firmware emulator"
